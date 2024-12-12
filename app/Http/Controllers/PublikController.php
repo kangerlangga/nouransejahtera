@@ -28,11 +28,11 @@ class PublikController extends Controller
         ]);
     }
 
-    //Fungsi untuk halaman product
-    public function product()
+    //Fungsi untuk halaman service
+    public function service()
     {
-        return view('pages.public.product', [
-            'judul' => 'Our Product',
+        return view('pages.public.service', [
+            'judul' => 'Our Services',
             // 'cP' => Product::where('stock_products', '>', 0)->count(),
             // 'Product' => Product::where('stock_products', '>', 0)->latest()->get(),
         ]);
