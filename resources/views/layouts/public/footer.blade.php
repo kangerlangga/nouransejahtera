@@ -18,16 +18,16 @@
 <!-- Footer End -->
 
 <!--Div where the WhatsApp will be rendered-->
-{{-- <div id="cpWA"></div>
+<div id="cpWA"></div>
 <script type="text/javascript">
 $(function () {
     $('#cpWA').floatingWhatsApp({
-    phone: '6282228220233',
+    phone: '6282199512424',
     size: '70px',
     position: "right"
     });
 });
-</script> --}}
+</script>
 
 <!-- Back to Top -->
 <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
