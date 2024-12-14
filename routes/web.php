@@ -3,7 +3,7 @@
 use App\Http\Controllers\PublikController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [PublikController::class, 'coming'])->name('coming.publik');
+Route::get('/', [PublikController::class, 'coming'])->name('home.publik');
 
 // Route::get('/', [PublikController::class, 'home'])->name('home.publik');
 Route::get('/about', [PublikController::class, 'about'])->name('about.publik');
