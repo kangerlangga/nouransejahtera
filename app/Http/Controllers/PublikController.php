@@ -45,4 +45,12 @@ class PublikController extends Controller
             'judul' => 'Contact Us',
         ]);
     }
+
+    //Fungsi untuk halaman coming
+    public function coming()
+    {
+        return view('pages.public.coming', [
+            'judul' => 'Coming Soon',
+        ]);
+    }
 }
