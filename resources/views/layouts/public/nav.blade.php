@@ -19,7 +19,7 @@
       <div class="navbar-nav ms-auto py-3 py-lg-0">
         <a href="{{ route('home.publik') }}" class="nav-item nav-link {{ Request::routeIs('home.publik') ? 'active' : '' }}">Home</a>
         <a href="{{ route('about.publik') }}" class="nav-item nav-link {{ Request::routeIs('about.publik') ? 'active' : '' }}">About</a>
-        <a href="{{ route('service.publik') }}" class="nav-item nav-link {{ Request::routeIs('service.publik') ? 'active' : '' }}">Services</a>
+        <a href="{{ route('product.publik') }}" class="nav-item nav-link {{ Request::routeIs('product.publik') ? 'active' : '' }}">Product</a>
         <a href="{{ route('contact.publik') }}" class="nav-item nav-link {{ Request::routeIs('contact.publik') ? 'active' : '' }}">Contact</a>
       </div>
     </div>

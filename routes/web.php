@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PublikController::class, 'home'])->name('home.publik');
 Route::get('/about', [PublikController::class, 'about'])->name('about.publik');
-Route::get('/service', [PublikController::class, 'service'])->name('service.publik');
+Route::get('/product', [PublikController::class, 'product'])->name('product.publik');
 Route::get('/contact', [PublikController::class, 'contact'])->name('contact.publik');
 // Route::post('/contact/send', [MessageController::class, 'store'])->name('contact.send');
 
