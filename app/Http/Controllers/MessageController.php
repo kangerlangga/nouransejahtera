@@ -14,9 +14,14 @@ class MessageController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): View
     {
-        //
+        $data = [
+            'judul' => 'Customer Messages',
+            'DataM' => Message::latest()->get(),
+            'cMC' => Message::where('status_messages', 'Unread')->count(),
+        ];
+        return view('pages.admin.message', $data);
     }
 
     /**
@@ -65,9 +70,21 @@ class MessageController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Message $message)
+    public function show(string $id)
     {
-        //
+        $message = Message::findOrFail($id);
+
+        $message->update([
+            'status_messages'   => 'Read',
+            'modified_by'       => Auth::user()->email,
+        ]);
+
+        $data = [
+            'judul' => 'Detail Message',
+            'DetailM' => Message::findOrFail($id),
+            'cMC' => Message::where('status_messages', 'Unread')->count(),
+        ];
+        return view('pages.admin.message_detail', $data);
     }
 
     /**
@@ -81,16 +98,30 @@ class MessageController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Message $message)
+    public function update(string $id): RedirectResponse
     {
-        //
+        $message = Message::findOrFail($id);
+
+        $message->update([
+            'status_messages'   => 'Unread',
+            'modified_by'       => Auth::user()->email,
+        ]);
+
+        return redirect()->route('message.data')->with(['success' => 'Message marked Unread!']);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Message $message)
+    public function destroy(string $id)
     {
-        //
+        //get by ID
+        $message = Message::findOrFail($id);
+
+        //delete
+        $message->delete();
+
+        //redirect to index
+        return redirect()->route('message.data')->with(['success' => 'Message has been Deleted!']);
     }
 }
