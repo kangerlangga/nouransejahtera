@@ -145,7 +145,7 @@
                   <h6 class="mb-0">Tim Profesional dan Terpercaya</h6>
                 </div>
               </div>
-            </div>            
+            </div>
           </div>
         </div>
       </div>
@@ -169,20 +169,23 @@
           </div>
           <p class="text-white mb-0" style="text-align: justify">
             Kami siap membantu Anda menemukan solusi terbaik di bidang perdagangan, kontraktor, dan pemasok. Buat janji sekarang untuk berdiskusi langsung dengan tim kami yang ramah dan profesional.
-          </p>          
+          </p>
         </div>
         <div class="col-lg-7 col-md-6 wow fadeIn" data-wow-delay="0.5s">
-          <form>
+            <form method="POST" action="{{ route('contact.send') }}" enctype="multipart/form-data">
+            @csrf
             <div class="row g-3">
               <div class="col-sm-6">
                 <div class="form-floating">
                   <input
                     type="text"
                     class="form-control bg-dark border-0"
-                    id="gname"
-                    placeholder="Gurdian Name"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name"
+                    required
                   />
-                  <label for="gname">Your Name</label>
+                  <label for="name">Your Name</label>
                 </div>
               </div>
               <div class="col-sm-6">
@@ -190,10 +193,12 @@
                   <input
                     type="email"
                     class="form-control bg-dark border-0"
-                    id="gmail"
-                    placeholder="Gurdian Email"
+                    id="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
                   />
-                  <label for="gmail">Your Email</label>
+                  <label for="email">Your Email</label>
                 </div>
               </div>
               <div class="col-sm-6">
@@ -201,10 +206,12 @@
                   <input
                     type="tel"
                     class="form-control bg-dark border-0"
-                    id="cname"
-                    placeholder="Child Name"
+                    id="phone"
+                    name="phone"
+                    placeholder="Your Phone"
+                    required
                   />
-                  <label for="cname">Your Phone</label>
+                  <label for="phone">Your Phone</label>
                 </div>
               </div>
               <div class="col-sm-6">
@@ -212,10 +219,12 @@
                   <input
                     type="text"
                     class="form-control bg-dark border-0"
-                    id="cage"
-                    placeholder="Child Age"
+                    id="subject"
+                    name="subject"
+                    placeholder="Subject"
+                    required
                   />
-                  <label for="cage">Subject</label>
+                  <label for="subject">Subject</label>
                 </div>
               </div>
               <div class="col-12">
@@ -224,11 +233,14 @@
                     class="form-control bg-dark border-0"
                     placeholder="Leave a message here"
                     id="message"
+                    name="message"
                     style="height: 100px"
+                    required
                   ></textarea>
                   <label for="message">Message</label>
                 </div>
               </div>
+              <input type="hidden" name="source" value="Home">
               <div class="col-12">
                 <button class="btn btn-primary w-100 py-3" type="submit">
                   Get Appointment
@@ -298,6 +310,23 @@
   <!-- Service End -->
 @include('layouts.public.footer')
 @include('layouts.public.script')
+<script>
+    @if(session('success'))
+    Swal.fire({
+        icon: "success",
+        title: "{{ session('success') }}",
+        showConfirmButton: false,
+        timer: 3000
+    });
+    @elseif(session('error'))
+    Swal.fire({
+        icon: "error",
+        title: "{{ session('error') }}",
+        showConfirmButton: false,
+        timer: 3000
+    });
+    @endif
+</script>
 @endsection
 
 <body>

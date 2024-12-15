@@ -54,8 +54,9 @@
             </div>
             <p class="mb-4" style="text-align: justify">
               We'd love to hear from you! If you have any questions, need more information, or want to share your feedback, please don't hesitate to reach out. Simply fill out the contact form, and our team will get back to you as soon as possible.
-            </p>            
-            <form>
+            </p>
+            <form method="POST" action="{{ route('contact.send') }}" enctype="multipart/form-data">
+              @csrf
               <div class="row g-3">
                 <div class="col-md-6">
                   <div class="form-floating">
@@ -63,7 +64,9 @@
                       type="text"
                       class="form-control border-0 bg-light"
                       id="name"
+                      name="name"
                       placeholder="Your Name"
+                      required
                     />
                     <label for="name">Your Name</label>
                   </div>
@@ -74,7 +77,9 @@
                       type="tel"
                       class="form-control border-0 bg-light"
                       id="phone"
+                      name="phone"
                       placeholder="Your Phone"
+                      required
                     />
                     <label for="phone">Your Phone</label>
                   </div>
@@ -85,7 +90,9 @@
                       type="email"
                       class="form-control border-0 bg-light"
                       id="email"
+                      name="email"
                       placeholder="Your Email"
+                      required
                     />
                     <label for="email">Your Email</label>
                   </div>
@@ -96,7 +103,9 @@
                       type="text"
                       class="form-control border-0 bg-light"
                       id="subject"
+                      name="subject"
                       placeholder="Subject"
+                      required
                     />
                     <label for="subject">Subject</label>
                   </div>
@@ -107,11 +116,14 @@
                       class="form-control border-0 bg-light"
                       placeholder="Leave a message here"
                       id="message"
+                      name="message"
                       style="height: 150px"
+                      required
                     ></textarea>
                     <label for="message">Message</label>
                   </div>
                 </div>
+                <input type="hidden" name="source" value="Contact">
                 <div class="col-12">
                   <button class="btn btn-primary py-3 px-5" type="submit">
                     Send Message
@@ -127,6 +139,23 @@
 
 @include('layouts.public.footer')
 @include('layouts.public.script')
+<script>
+  @if(session('success'))
+  Swal.fire({
+      icon: "success",
+      title: "{{ session('success') }}",
+      showConfirmButton: false,
+      timer: 3000
+  });
+  @elseif(session('error'))
+  Swal.fire({
+      icon: "error",
+      title: "{{ session('error') }}",
+      showConfirmButton: false,
+      timer: 3000
+  });
+  @endif
+</script>
 @endsection
 
 <body>
