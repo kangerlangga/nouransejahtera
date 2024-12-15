@@ -25,7 +25,7 @@
     <!-- Page Header End -->
 
   <!-- About Start -->
-  <div class="container-xxl py-5">
+  <div class="container-xxl pb-5 pt-3">
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -60,17 +60,17 @@
                 <!-- Feature 1 -->
                 <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.1s">
                   <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
-                  <h6 class="mb-0">Tepat Waktu dalam Pelayanan</h6>
+                  <h6 class="mb-0">Pelayanan Cepat dan Tepat Waktu</h6>
                 </div>
                 <!-- Feature 2 -->
                 <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.3s">
                   <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
-                  <h6 class="mb-0">Pelayanan 24/7 Siap Mendukung Anda</h6>
+                  <h6 class="mb-0">Proses Mudah dan Efisien</h6>
                 </div>
                 <!-- Feature 3 -->
                 <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.5s">
                   <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
-                  <h6 class="mb-0">Didukung Tim Profesional dan Terpercaya</h6>
+                  <h6 class="mb-0">Tim Profesional dan Terpercaya</h6>
                 </div>
               </div>
             </div>            

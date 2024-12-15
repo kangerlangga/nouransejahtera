@@ -25,14 +25,14 @@
     <!-- Page Header End -->
 
   <!-- Service Start -->
-  <div class="container-xxl py-5">
+  <div class="container-xxl pb-5 pt-3">
     <div class="container">
       <div class="row g-5 align-items-end mb-5">
         <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
           <div class="border-start border-5 border-primary ps-4">
-            <h6 class="text-body text-uppercase mb-2">Our Services</h6>
+            <h6 class="text-body text-uppercase mb-2">Catalog Product</h6>
             <h1 class="display-6 mb-0">
-              Your Trusted Partner for Business Solutions
+              Discover the Best Products in Our Catalog
             </h1>
           </div>
         </div>

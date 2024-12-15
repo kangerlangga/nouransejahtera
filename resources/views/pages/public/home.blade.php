@@ -97,7 +97,7 @@
   <!-- Carousel End -->
 
   <!-- About Start -->
-  <div class="container-xxl py-3">
+  <div class="container-xxl py-5">
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -132,17 +132,17 @@
                 <!-- Feature 1 -->
                 <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.1s">
                   <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
-                  <h6 class="mb-0">Tepat Waktu dalam Pelayanan</h6>
+                  <h6 class="mb-0">Pelayanan Cepat dan Tepat Waktu</h6>
                 </div>
                 <!-- Feature 2 -->
                 <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.3s">
                   <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
-                  <h6 class="mb-0">Pelayanan 24/7 Siap Mendukung Anda</h6>
+                  <h6 class="mb-0">Proses Mudah dan Efisien</h6>
                 </div>
                 <!-- Feature 3 -->
                 <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.5s">
                   <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
-                  <h6 class="mb-0">Didukung Tim Profesional dan Terpercaya</h6>
+                  <h6 class="mb-0">Tim Profesional dan Terpercaya</h6>
                 </div>
               </div>
             </div>            
@@ -152,6 +152,95 @@
     </div>
   </div>
   <!-- About End -->
+
+  <!-- Appointment Start -->
+  <div
+    class="container-fluid appointment mt-3 py-5 wow fadeIn"
+    data-wow-delay="0.1s"
+  >
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-5 col-md-6 wow fadeIn" data-wow-delay="0.3s">
+          <div class="border-start border-5 border-primary ps-4 mb-5">
+            <h6 class="text-white text-uppercase mb-2">Appointment</h6>
+            <h1 class="display-6 text-white mb-0">
+              Book a Meeting with Our Team
+            </h1>
+          </div>
+          <p class="text-white mb-0" style="text-align: justify">
+            Kami siap membantu Anda menemukan solusi terbaik di bidang perdagangan, kontraktor, dan pemasok. Buat janji sekarang untuk berdiskusi langsung dengan tim kami yang ramah dan profesional.
+          </p>          
+        </div>
+        <div class="col-lg-7 col-md-6 wow fadeIn" data-wow-delay="0.5s">
+          <form>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control bg-dark border-0"
+                    id="gname"
+                    placeholder="Gurdian Name"
+                  />
+                  <label for="gname">Your Name</label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-floating">
+                  <input
+                    type="email"
+                    class="form-control bg-dark border-0"
+                    id="gmail"
+                    placeholder="Gurdian Email"
+                  />
+                  <label for="gmail">Your Email</label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-floating">
+                  <input
+                    type="tel"
+                    class="form-control bg-dark border-0"
+                    id="cname"
+                    placeholder="Child Name"
+                  />
+                  <label for="cname">Your Phone</label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control bg-dark border-0"
+                    id="cage"
+                    placeholder="Child Age"
+                  />
+                  <label for="cage">Subject</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <textarea
+                    class="form-control bg-dark border-0"
+                    placeholder="Leave a message here"
+                    id="message"
+                    style="height: 100px"
+                  ></textarea>
+                  <label for="message">Message</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary w-100 py-3" type="submit">
+                  Get Appointment
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Appointment End -->
 
   <!-- Service Start -->
   <div class="container-xxl py-5">
@@ -207,95 +296,6 @@
     </div>
   </div>
   <!-- Service End -->
-
-  <!-- Appointment Start -->
-  <div
-    class="container-fluid appointment mt-3 py-5 wow fadeIn"
-    data-wow-delay="0.1s"
-  >
-    <div class="container py-5">
-      <div class="row g-5">
-        <div class="col-lg-5 col-md-6 wow fadeIn" data-wow-delay="0.3s">
-          <div class="border-start border-5 border-primary ps-4 mb-5">
-            <h6 class="text-white text-uppercase mb-2">Appointment</h6>
-            <h1 class="display-6 text-white mb-0">
-              Book a Meeting with Our Team
-            </h1>
-          </div>
-          <p class="text-white mb-0" style="text-align: justify">
-            Kami siap membantu Anda menemukan solusi terbaik di bidang perdagangan, kontraktor, dan pemasok. Buat janji sekarang untuk berdiskusi langsung dengan tim kami yang ramah dan profesional.
-          </p>          
-        </div>
-        <div class="col-lg-7 col-md-6 wow fadeIn" data-wow-delay="0.5s">
-          <form>
-            <div class="row g-3">
-              <div class="col-sm-6">
-                <div class="form-floating">
-                  <input
-                    type="text"
-                    class="form-control bg-dark border-0"
-                    id="gname"
-                    placeholder="Gurdian Name"
-                  />
-                  <label for="gname">Your Name</label>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-floating">
-                  <input
-                    type="email"
-                    class="form-control bg-dark border-0"
-                    id="gmail"
-                    placeholder="Gurdian Email"
-                  />
-                  <label for="gmail">Your Email</label>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-floating">
-                  <input
-                    type="text"
-                    class="form-control bg-dark border-0"
-                    id="cname"
-                    placeholder="Child Name"
-                  />
-                  <label for="cname">Your Mobile</label>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-floating">
-                  <input
-                    type="text"
-                    class="form-control bg-dark border-0"
-                    id="cage"
-                    placeholder="Child Age"
-                  />
-                  <label for="cage">Service Type</label>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-floating">
-                  <textarea
-                    class="form-control bg-dark border-0"
-                    placeholder="Leave a message here"
-                    id="message"
-                    style="height: 100px"
-                  ></textarea>
-                  <label for="message">Message</label>
-                </div>
-              </div>
-              <div class="col-12">
-                <button class="btn btn-primary w-100 py-3" type="submit">
-                  Get Appointment
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Appointment End -->
 @include('layouts.public.footer')
 @include('layouts.public.script')
 @endsection

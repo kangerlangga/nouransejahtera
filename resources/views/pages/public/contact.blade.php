@@ -24,94 +24,106 @@
     </div>
     <!-- Page Header End -->
 
-  <!-- Appointment Start -->
-  <div
-    class="container-fluid appointment mt-3 py-5 wow fadeIn"
-    data-wow-delay="0.1s"
-  >
-    <div class="container py-5">
-      <div class="row g-5">
-        <div class="col-lg-5 col-md-6 wow fadeIn" data-wow-delay="0.3s">
-          <div class="border-start border-5 border-primary ps-4 mb-5">
-            <h6 class="text-white text-uppercase mb-2">Appointment</h6>
-            <h1 class="display-6 text-white mb-0">
-              Book a Meeting with Our Team
-            </h1>
-          </div>
-          <p class="text-white mb-0" style="text-align: justify">
-            Kami siap membantu Anda menemukan solusi terbaik di bidang perdagangan, kontraktor, dan pemasok. Buat janji sekarang untuk berdiskusi langsung dengan tim kami yang ramah dan profesional.
-          </p>          
-        </div>
-        <div class="col-lg-7 col-md-6 wow fadeIn" data-wow-delay="0.5s">
-          <form>
-            <div class="row g-3">
-              <div class="col-sm-6">
-                <div class="form-floating">
-                  <input
-                    type="text"
-                    class="form-control bg-dark border-0"
-                    id="gname"
-                    placeholder="Gurdian Name"
-                  />
-                  <label for="gname">Your Name</label>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-floating">
-                  <input
-                    type="email"
-                    class="form-control bg-dark border-0"
-                    id="gmail"
-                    placeholder="Gurdian Email"
-                  />
-                  <label for="gmail">Your Email</label>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-floating">
-                  <input
-                    type="text"
-                    class="form-control bg-dark border-0"
-                    id="cname"
-                    placeholder="Child Name"
-                  />
-                  <label for="cname">Your Mobile</label>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-floating">
-                  <input
-                    type="text"
-                    class="form-control bg-dark border-0"
-                    id="cage"
-                    placeholder="Child Age"
-                  />
-                  <label for="cage">Service Type</label>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-floating">
-                  <textarea
-                    class="form-control bg-dark border-0"
-                    placeholder="Leave a message here"
-                    id="message"
-                    style="height: 100px"
-                  ></textarea>
-                  <label for="message">Message</label>
-                </div>
-              </div>
-              <div class="col-12">
-                <button class="btn btn-primary w-100 py-3" type="submit">
-                  Get Appointment
-                </button>
-              </div>
+    <!-- Contact Start -->
+    <div class="container-xxl pb-5 pt-3">
+      <div class="container">
+        <div class="row g-5">
+          <div
+            class="col-lg-6 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="min-height: 450px"
+          >
+            <div class="position-relative h-100">
+              <iframe
+                class="position-relative w-100 h-100"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.077379711107!2d112.68964410000001!3d-7.456691899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e10056019363%3A0x2ba3f8eb70aa4802!2sPT.%20Nouran%20Sejahtera%20Indonesia!5e0!3m2!1sid!2sid!4v1734261214745!5m2!1sid!2sid"
+                frameborder="0"
+                style="min-height: 450px; border: 0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
             </div>
-          </form>
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="border-start border-5 border-primary ps-4 mb-5">
+              <h6 class="text-body text-uppercase mb-2">Contact Us</h6>
+              <h1 class="display-6 mb-0">
+                Have Questions? We're Here to Help!
+              </h1>
+            </div>
+            <p class="mb-4" style="text-align: justify">
+              We'd love to hear from you! If you have any questions, need more information, or want to share your feedback, please don't hesitate to reach out. Simply fill out the contact form, and our team will get back to you as soon as possible.
+            </p>            
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control border-0 bg-light"
+                      id="name"
+                      placeholder="Your Name"
+                    />
+                    <label for="name">Your Name</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="tel"
+                      class="form-control border-0 bg-light"
+                      id="phone"
+                      placeholder="Your Phone"
+                    />
+                    <label for="phone">Your Phone</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control border-0 bg-light"
+                      id="email"
+                      placeholder="Your Email"
+                    />
+                    <label for="email">Your Email</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control border-0 bg-light"
+                      id="subject"
+                      placeholder="Subject"
+                    />
+                    <label for="subject">Subject</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control border-0 bg-light"
+                      placeholder="Leave a message here"
+                      id="message"
+                      style="height: 150px"
+                    ></textarea>
+                    <label for="message">Message</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary py-3 px-5" type="submit">
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Appointment End -->
+    <!-- Contact End -->
 
 @include('layouts.public.footer')
 @include('layouts.public.script')
