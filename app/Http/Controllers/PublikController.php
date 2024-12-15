@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HomeSlider;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class PublikController extends Controller
@@ -11,12 +13,8 @@ class PublikController extends Controller
     {
         return view('pages.public.home', [
             'judul' => 'Home',
-            // 'cHS' => HomeSlider::where('visib_home_sliders', 'Showing')->count(),
-            // 'HomeSlider' => HomeSlider::where('visib_home_sliders', 'Showing')->orderBy('created_at', 'asc')->get(),
-            // 'cP' => Product::where('stock_products', '>', 0)->count(),
-            // 'Product' => Product::where('stock_products', '>', 0)->latest()->limit(3)->get(),
-            // 'cC' => Comment::where('visib_comments', 'Showing')->count(),
-            // 'Comment' => Comment::where('visib_comments', 'Showing')->latest()->get(),
+            'cHS' => HomeSlider::where('visib_home_sliders', 'Showing')->count(),
+            'HomeSlider' => HomeSlider::where('visib_home_sliders', 'Showing')->orderBy('created_at', 'asc')->get(),
         ]);
     }
 
@@ -33,8 +31,8 @@ class PublikController extends Controller
     {
         return view('pages.public.product', [
             'judul' => 'Our Product',
-            // 'cP' => Product::where('stock_products', '>', 0)->count(),
-            // 'Product' => Product::where('stock_products', '>', 0)->latest()->get(),
+            'cP' => Product::where('visib_products', 'Showing')->count(),
+            'Product' => Product::where('visib_products', 'Showing')->orderBy('page_products', 'asc')->get(),
         ]);
     }
 

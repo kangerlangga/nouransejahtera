@@ -11,68 +11,32 @@
 </div>
 <!-- Spinner End -->
 @include('layouts.public.nav')
-
+<?php if ($cHS > 0) : ?>
 <!-- Carousel Start -->
 <div class="container-fluid p-0 mb-3 wow fadeIn" data-wow-delay="0.1s">
     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="w-100" src="{{  url('') }}/assets/public/img/Beranda/1.jpg" alt="Image" />
+        <?php $no = 1; ?>
+        @foreach ($HomeSlider as $H)
+        <div class="carousel-item{{ $no == 1 ? ' active' : '' }}">
+          <img class="w-100" src="{{ url('') }}/assets/public/img/HomeSlider/{{ $H->image_home_sliders }}" alt="Image" />
           <div class="carousel-caption">
             <div class="container">
               <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                  <h5
-                    class="text-light text-uppercase mb-3 animated slideInDown"
-                  >
-                    PT. Nouran Sejahtera Indonesia
+                  <h5 class="text-light text-uppercase mb-3 animated slideInDown">
+                    {{ $H->title_home_sliders }}
                   </h5>
                   <h1 class="display-2 text-light mb-3 animated slideInDown">
-                    Inovasi Terpercaya untuk Solusi Anda
+                    {{ $H->desc_home_sliders }}
                   </h1>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <img class="w-100" src="{{  url('') }}/assets/public/img/Beranda/2.jpg" alt="Image" />
-          <div class="carousel-caption">
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-12 col-lg-10">
-                  <h5
-                    class="text-light text-uppercase mb-3 animated slideInDown"
-                  >
-                  PT. Nouran Sejahtera Indonesia
-                  </h5>
-                  <h1 class="display-2 text-light mb-3 animated slideInDown">
-                    Layanan Berkualitas Tinggi yang Diandalkan
-                  </h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-            <img class="w-100" src="{{  url('') }}/assets/public/img/Beranda/3.jpg" alt="Image" />
-            <div class="carousel-caption">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-12 col-lg-10">
-                    <h5
-                      class="text-light text-uppercase mb-3 animated slideInDown"
-                    >
-                    PT. Nouran Sejahtera Indonesia
-                    </h5>
-                    <h1 class="display-2 text-light mb-3 animated slideInDown">
-                        Mitra Handal untuk Kesuksesan Bersama
-                    </h1>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <?php $no++; ?>
+        @endforeach
       </div>
       <button
         class="carousel-control-prev"
@@ -95,7 +59,7 @@
     </div>
   </div>
   <!-- Carousel End -->
-
+  <?php endif;?>
   <!-- About Start -->
   <div class="container-xxl py-5">
     <div class="container">

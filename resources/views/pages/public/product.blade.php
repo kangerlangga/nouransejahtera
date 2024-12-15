@@ -38,42 +38,18 @@
         </div>
       </div>
       <div class="row g-4 justify-content-center">
-        <!-- General Trading -->
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="service-item bg-light overflow-hidden h-100">
-            <img class="img-fluid" src="{{ url('') }}/assets/public/img/Layanan/1.jpg" alt="" />
-            <div class="service-text position-relative text-center h-100 p-4">
-              <h5 class="mb-3">General Trading</h5>
-              <p>
-                Kami menyediakan solusi perdagangan umum yang andal, memenuhi kebutuhan bisnis Anda dengan produk berkualitas dan layanan profesional.
-              </p>
+        @if ($cP == 0)
+            <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
+                <img src="{{ url('') }}/assets/public/img/comingsoon.jpg" class="img-fluid" alt="Coming Soon" style="min-width: 100%;">
             </div>
-          </div>
-        </div>
-        <!-- Contractor -->
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-          <div class="service-item bg-light overflow-hidden h-100">
-            <img class="img-fluid" src="{{ url('') }}/assets/public/img/Layanan/2.jpg" alt="" />
-            <div class="service-text position-relative text-center h-100 p-4">
-              <h5 class="mb-3">Contractor</h5>
-              <p>
-                Kami mengelola proyek konstruksi dan renovasi dengan standar tinggi, memberikan hasil yang berkualitas, tepat waktu, dan sesuai kebutuhan.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- Supplier -->
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-          <div class="service-item bg-light overflow-hidden h-100">
-            <img class="img-fluid" src="{{ url('') }}/assets/public/img/Layanan/3.jpg" alt="" />
-            <div class="service-text position-relative text-center h-100 p-4">
-              <h5 class="mb-3">Supplier</h5>
-              <p>
-                Kami menyediakan pasokan barang berkualitas untuk mendukung kebutuhan operasional bisnis Anda, dengan pengiriman tepat waktu dan efisien.
-              </p>
-            </div>
-          </div>
-        </div>
+        @elseif ($cP > 0)
+            <!-- Catalog Product -->
+            @foreach ($Product as $P)
+                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <img src="{{ url('') }}/assets/public/img/Product/{{ $P->image_products }}" class="img-fluid" alt="{{ $P->page_products }}" style="min-width: 100%;">
+                </div>
+            @endforeach
+        @endif
       </div>
     </div>
   </div>

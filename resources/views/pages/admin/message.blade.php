@@ -37,11 +37,11 @@
                             @if ($M->status_messages == 'Unread')
                             <div class="card-header card-success">
                             @else
-                            <div class="card-header" style="background-color: #feb300">
+                            <div class="card-header" style="background-color: #013679">
                             @endif
                                 <div class="profile-picture">
                                     <div class="avatar avatar-xl">
-                                        <img src="{{  url('') }}/assets/admin/img/customer.png" alt="..." class="avatar-img">
+                                        <img src="{{  url('') }}/assets/admin/img/customer.png" alt="{{ $M->subject_messages }}" class="avatar-img">
                                     </div>
                                 </div>
                             </div>
