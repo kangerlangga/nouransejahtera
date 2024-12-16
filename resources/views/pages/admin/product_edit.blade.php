@@ -45,7 +45,7 @@
                                                 <span style="color: red;">Max 3 MB</span>
                                                 <span class="d-none d-sm-inline"> | </span>
                                                 <span class="d-sm-none"><br></span>
-                                                Standard Size 1024px x 1024px
+                                                Standard Size 1414px x 2000px
                                             </label>
 											<input type="file" class="form-control-file" id="ImageP" name="ImageP" accept=".png, .jpg, .jpeg">
                                             @error('ImageP')
@@ -54,36 +54,18 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="form-group @error('Name') has-error has-feedback @enderror">
-                                            <label for="Name">Name Product</label>
-                                            <input type="text" id="Name" name="Name" value="{{ old('Name', $EditProduct->name_products) }}" class="form-control" required>
-                                            @error('Name')
-                                            <small id="Name" class="form-text text-muted">{{ $message }}</small>
-                                            @enderror
+                                        <div class="form-group">
+                                            <label for="Page">Page Catalog Product</label>
+                                            <input class="form-control" name="Page" value="{{ $EditProduct->page_products }}" id="Code" readonly style="cursor: not-allowed">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="Code">Code Product</label>
-                                            <input class="form-control" name="Code" value="{{ $EditProduct->code_products }}" id="Code" readonly style="cursor: not-allowed">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group @error('Price') has-error has-feedback @enderror">
-                                            <label for="Price">Price Product</label>
-                                            <input type="number" id="Price" name="Price" min="0" value="{{ old('Price', $EditProduct->price_products) }}" class="form-control" required>
-                                            @error('Price')
-                                            <small id="Price" class="form-text text-muted">{{ $message }}</small>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group @error('Stock') has-error has-feedback @enderror">
-                                            <label for="Stock">Stock Product</label>
-                                            <input type="number" id="Stock" name="Stock" min="0" value="{{ old('Stock', $EditProduct->stock_products) }}" class="form-control" required>
-                                            @error('Stock')
-                                            <small id="Stock" class="form-text text-muted">{{ $message }}</small>
-                                            @enderror
+                                            <label for="visibility">Visibility</label>
+                                            <select class="form-control" id="visibility" name="visibility">
+                                                <option name='visibility' value='Showing' {{ $EditProduct->visib_products == 'Showing' ? 'selected' : '' }}>Showing (Publish)</option>
+                                                <option name='visibility' value='Hiding' {{ $EditProduct->visib_products == 'Hiding' ? 'selected' : '' }}>Hiding (Unpublish)</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 mt-1">

@@ -45,7 +45,7 @@
                                                 <span style="color: red;">Max 3 MB</span>
                                                 <span class="d-none d-sm-inline"> | </span>
                                                 <span class="d-sm-none"><br></span>
-                                                Standard Size 1024px x 1024px
+                                                Standard Size 1414px x 2000px
                                             </label>
 											<input type="file" class="form-control-file" id="ImageP" name="ImageP" accept=".png, .jpg, .jpeg" required>
                                             @error('ImageP')
@@ -54,39 +54,21 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="form-group @error('Name') has-error has-feedback @enderror">
-                                            <label for="Name">Name Product</label>
-                                            <input type="text" id="Name" name="Name" value="{{ old('Name') }}" class="form-control" required>
-                                            @error('Name')
-                                            <small id="Name" class="form-text text-muted">{{ $message }}</small>
+                                        <div class="form-group @error('Page') has-error has-feedback @enderror">
+                                            <label for="Page">Page Catalog Product</label>
+                                            <input type="number" id="Page" name="Page" min="1" value="{{ old('Page') }}" class="form-control" required>
+                                            @error('Page')
+                                            <small id="Page" class="form-text text-muted">{{ $message }}</small>
                                             @enderror
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="form-group @error('Code') has-error has-feedback @enderror">
-                                            <label for="Code">Code Product</label>
-                                            <input type="text" id="Code" name="Code" value="{{ old('Code') }}" class="form-control" required>
-                                            @error('Code')
-                                            <small id="Code" class="form-text text-muted">{{ $message }}</small>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group @error('Price') has-error has-feedback @enderror">
-                                            <label for="Price">Price Product</label>
-                                            <input type="number" id="Price" name="Price" min="0" value="{{ old('Price') }}" class="form-control" required>
-                                            @error('Price')
-                                            <small id="Price" class="form-text text-muted">{{ $message }}</small>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group @error('Stock') has-error has-feedback @enderror">
-                                            <label for="Stock">Stock Product</label>
-                                            <input type="number" id="Stock" name="Stock" min="0" value="{{ old('Stock') }}" class="form-control" required>
-                                            @error('Stock')
-                                            <small id="Stock" class="form-text text-muted">{{ $message }}</small>
-                                            @enderror
+                                        <div class="form-group">
+                                            <label for="visibility">Visibility</label>
+                                            <select class="form-control" id="visibility" name="visibility">
+                                                <option name='visibility' value='Showing'>Showing (Publish)</option>
+                                                <option name='visibility' value='Hiding'>Hiding (Unpublish)</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 mt-1">

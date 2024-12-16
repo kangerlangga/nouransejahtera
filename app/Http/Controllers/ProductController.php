@@ -19,7 +19,7 @@ class ProductController extends Controller
     {
         $data = [
             'judul' => 'Products',
-            'DataP' => Product::latest()->get(),
+            'DataP' => Product::orderBy('page_products', 'asc')->get(),
             'cMC' => Message::where('status_messages', 'Unread')->count(),
         ];
         return view('pages.admin.product', $data);
@@ -45,10 +45,7 @@ class ProductController extends Controller
         // validate form
         $request->validate([
             'ImageP'    => 'required|image|mimes:jpeg,jpg,png|max:3072',
-            'Name'      => 'required|max:255',
-            'Code'      => 'required|max:100|unique:products,code_products',
-            'Price'     => 'required|numeric|min:0',
-            'Stock'     => 'required|integer|min:0',
+            'Page'      => 'required|min:1|max:100|unique:products,page_products',
         ]);
 
         // Upload images
@@ -64,10 +61,8 @@ class ProductController extends Controller
         Product::create([
             'id_products'       => 'Product'.Str::random(33),
             'image_products'    => $imagePName,
-            'name_products'     => $request->Name,
-            'code_products'     => $request->Code,
-            'price_products'    => $request->Price,
-            'stock_products'    => $request->Stock,
+            'page_products'     => $request->Page,
+            'visib_products'    => $request->visibility,
             'created_by'        => Auth::user()->email,
             'modified_by'       => Auth::user()->email,
         ]);
@@ -104,15 +99,12 @@ class ProductController extends Controller
     {
         $request->validate([
             'ImageP'    => 'image|mimes:jpeg,jpg,png|max:3072',
-            'Name'      => 'required|max:255',
-            'Price'     => 'required|numeric|min:0',
-            'Stock'     => 'required|integer|min:0',
         ]);
 
         $product = Product::findOrFail($id);
 
         if ($request->hasFile('ImageP')) {
-            $imagePPath = 'assets/public/img/Product/' . $product->image_products;
+            $imagePPath = public_path('assets/public/img/Product/' . $product->image_products);
             if (file_exists($imagePPath)) {
                 unlink($imagePPath);
             }
@@ -125,9 +117,7 @@ class ProductController extends Controller
 
         $product->update([
             'image_products'    => $imagePName,
-            'name_products'     => $request->Name,
-            'price_products'    => $request->Price,
-            'stock_products'    => $request->Stock,
+            'visib_products'    => $request->visibility,
             'modified_by'       => Auth::user()->email,
         ]);
 
@@ -142,7 +132,7 @@ class ProductController extends Controller
     {
         //get by ID
         $product = Product::findOrFail($id);
-        $imagePPath = 'assets/public/img/Product/' . $product->image_products;
+        $imagePPath = public_path('assets/public/img/Product/' . $product->image_products);
 
         if (file_exists($imagePPath)) {
             unlink($imagePPath);
@@ -152,10 +142,5 @@ class ProductController extends Controller
 
         //redirect to index
         return redirect()->route('product.data')->with(['success' => 'Product has been Deleted!']);
-    }
-
-    public function getProductPrice($code) {
-        $product = Product::where('code_products', $code)->first();
-        return response()->json(['price' => $product ? $product->price_products : 0, 'stock' => $product ? $product->stock_products : 0]);
     }
 }

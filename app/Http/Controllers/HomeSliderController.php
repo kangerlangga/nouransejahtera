@@ -106,7 +106,7 @@ class HomeSliderController extends Controller
 
         //cek gambar di upload
         if ($request->hasFile('Images')) {
-            $homes_path = 'assets/public/img/HomeSlider/' . $homes->image_home_sliders;
+            $homes_path = public_path('assets/public/img/HomeSlider/' . $homes->image_home_sliders);
             if (file_exists($homes_path)) {
                 unlink($homes_path);
             }
@@ -149,7 +149,7 @@ class HomeSliderController extends Controller
         $homes = HomeSlider::findOrFail($id);
 
         //delete image
-        $homes_path = 'assets/public/img/HomeSlider/' . $homes->image_home_sliders;
+        $homes_path = public_path('assets/public/img/HomeSlider/' . $homes->image_home_sliders);
         if (file_exists($homes_path)) {
             unlink($homes_path);
         }

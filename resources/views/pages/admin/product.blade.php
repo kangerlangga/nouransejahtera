@@ -47,10 +47,10 @@
                                 <div class="d-flex">
                                     <div class="info-post ml-2">
                                         <p class="username">
-                                            {{ $P->code_products }} | {{ $P->name_products }}
-                                            (<span style="color: {{ $P->stock_products == 0 ? 'red' : 'inherit' }};">{{ $P->stock_products }}</span>)
+                                            Page {{ $P->page_products }}
+                                            <span style="color: {{ $P->visib_products == 'Hiding' ? 'red' : 'green' }};">({{ $P->visib_products }})</span>
                                         </p>
-                                        <p class="date text-muted">Rp {{ number_format($P->price_products, 0, ',', '.') }}</p>
+                                        {{-- <p class="date text-muted"><span style="color: {{ $P->visib_products == 'Hiding' ? 'red' : 'inherit' }};">{{ $P->visib_products }}</span></p> --}}
                                     </div>
                                 </div>
                                 <div class="separator-solid"></div>
