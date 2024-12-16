@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HomeSlider;
 use App\Models\Message;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -15,14 +17,9 @@ class AdminController extends Controller
         $fiveMinutesAgo = $now - 300;
         $data = [
             'judul' => 'Dashboard',
-            // 'cP' => Product::count(),
-            // 'cS' => Product::sum('stock_products'),
-            // 'cC' => Comment::count(),
-            // 'cM' => Message::count(),
+            'cP' => Product::count(),
+            'cM' => Message::count(),
             'cMC' => Message::where('status_messages', 'Unread')->count(),
-            // 'cOPr' => Order::where('status_orders', 'Processing')->count(),
-            // 'cOS' => Order::where('status_orders', 'Shipped')->count(),
-            // 'cOD' => Order::where('status_orders', 'Delivered')->count(),
             'cVO' => DB::table('sessions')->where('last_activity', '>=', $fiveMinutesAgo)->count(),
         ];
         return view('pages.admin.dashboard', $data);

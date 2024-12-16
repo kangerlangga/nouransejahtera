@@ -22,51 +22,32 @@
             </div>
             <div class="page-inner mt--5">
                 <div class="row mt--2">
-                    {{-- <div class="col-sm-6 col-md-3">
+                    <div class="col-sm-6 col-md-4">
                         <div class="card card-stats card-round">
-                            <div class="card-body ">
+                            <div class="card-body">
                                 <div class="row align-items-center">
                                     <div class="col-icon">
                                         <div class="icon-big text-center icon-info bubble-shadow-small" style="background-color: #013679">
-                                            <i class="flaticon-box-2"></i>
+                                            <i class="flaticon-file-1"></i>
                                         </div>
                                     </div>
                                     <div class="col col-stats ml-3 ml-sm-0">
                                         <div class="numbers">
-                                            <p class="card-category">Products</p>
-                                            <h4 class="card-title">{{ $cP }} Item</h4>
+                                            <p class="card-category">Catalog Products</p>
+                                            <h4 class="card-title">{{ $cP }} Page</h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">
+                    <div class="col-sm-6 col-md-4">
                         <div class="card card-stats card-round">
                             <div class="card-body">
                                 <div class="row align-items-center">
                                     <div class="col-icon">
                                         <div class="icon-big text-center icon-info bubble-shadow-small" style="background-color: #013679">
-                                            <i class="flaticon-box"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col col-stats ml-3 ml-sm-0">
-                                        <div class="numbers">
-                                            <p class="card-category">Stocks</p>
-                                            <h4 class="card-title">{{ $cS }} (All)</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="card card-stats card-round">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-icon">
-                                        <div class="icon-big text-center icon-info bubble-shadow-small" style="background-color: #013679">
-                                            <i class="flaticon-envelope-1"></i>
+                                            <i class="flaticon-chat-8"></i>
                                         </div>
                                     </div>
                                     <div class="col col-stats ml-3 ml-sm-0">
@@ -79,101 +60,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">
+                    <div class="col-sm-6 col-md-4">
                         <div class="card card-stats card-round">
                             <div class="card-body">
                                 <div class="row align-items-center">
                                     <div class="col-icon">
                                         <div class="icon-big text-center icon-info bubble-shadow-small" style="background-color: #013679">
-                                            <i class="flaticon-chat-8"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col col-stats ml-3 ml-sm-0">
-                                        <div class="numbers">
-                                            <p class="card-category">Comments</p>
-                                            <h4 class="card-title">{{ $cC }} Person</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="card card-stats card-round">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-icon">
-                                        <div class="icon-big text-center icon-info bubble-shadow-small" style="background-color: #FF8C00">
                                             <i class="flaticon-stopwatch"></i>
                                         </div>
                                     </div>
                                     <div class="col col-stats ml-3 ml-sm-0">
                                         <div class="numbers">
-                                            <p class="card-category">Pending</p>
-                                            <h4 class="card-title">{{ $cOP }} Order</h4>
+                                            <p class="card-category" id="dynamic-time1">---</p>
+                                            <h4 class="card-title" id="dynamic-time2">---</h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="card card-stats card-round">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-icon">
-                                        <div class="icon-big text-center icon-info bubble-shadow-small" style="background-color: #007BFF">
-                                            <i class="flaticon-box-3"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col col-stats ml-3 ml-sm-0">
-                                        <div class="numbers">
-                                            <p class="card-category">Processing</p>
-                                            <h4 class="card-title">{{ $cOPr }} Order</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="card card-stats card-round">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-icon">
-                                        <div class="icon-big text-center icon-info bubble-shadow-small" style="background-color: #6A5ACD">
-                                            <i class="flaticon-delivery-truck"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col col-stats ml-3 ml-sm-0">
-                                        <div class="numbers">
-                                            <p class="card-category">Shipped</p>
-                                            <h4 class="card-title">{{ $cOS }} Order</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="card card-stats card-round">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-icon">
-                                        <div class="icon-big text-center icon-info bubble-shadow-small" style="background-color: #228B22">
-                                            <i class="flaticon-success"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col col-stats ml-3 ml-sm-0">
-                                        <div class="numbers">
-                                            <p class="card-category">Delivered</p>
-                                            <h4 class="card-title">{{ $cOD }} Order</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
                     @if (Auth::user()->level == 'Super Admin')
                     <div class="col-md-4">
                         <div class="card text-white" style="background: linear-gradient(to bottom right, #013679, #012f5d);">
@@ -206,6 +111,20 @@
             timer: 3000
         });
     @endif
+    function updateTime() {
+        const timeElement1 = document.getElementById('dynamic-time1');
+        const timeElement2 = document.getElementById('dynamic-time2');
+        const now = new Date();
+
+        const options = { day: 'numeric', month: 'long', year: 'numeric' };
+        const formattedDate = now.toLocaleDateString('en-GB', options);
+        const formattedTime = now.toLocaleTimeString('en-GB', { hour12: false });
+
+        timeElement1.textContent = `${formattedDate}`;
+        timeElement2.textContent = `${formattedTime}`;
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
 </script>
 @include('layouts.admin.script')
 @endsection
