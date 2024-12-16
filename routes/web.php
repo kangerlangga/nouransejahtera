@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/', [PublikController::class, 'coming'])->name('home.publik');
 
+Route::get('/server-time', function () {
+    return response()->json(['server_time' => now()->toDateTimeString()]);
+});
+
 Route::get('/', [PublikController::class, 'home'])->name('home.publik');
 Route::get('/about', [PublikController::class, 'about'])->name('about.publik');
 Route::get('/product', [PublikController::class, 'product'])->name('product.publik');

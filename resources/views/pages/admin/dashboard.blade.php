@@ -111,17 +111,43 @@
             timer: 3000
         });
     @endif
-    function updateTime() {
+    // function updateTime() {
+    //     const timeElement1 = document.getElementById('dynamic-time1');
+    //     const timeElement2 = document.getElementById('dynamic-time2');
+    //     const now = new Date();
+
+    //     const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    //     const formattedDate = now.toLocaleDateString('en-GB', options);
+    //     const formattedTime = now.toLocaleTimeString('en-GB', { hour12: false });
+
+    //     timeElement1.textContent = `${formattedDate}`;
+    //     timeElement2.textContent = `${formattedTime}`;
+    // }
+    // setInterval(updateTime, 1000);
+    // updateTime();
+    async function updateTime() {
         const timeElement1 = document.getElementById('dynamic-time1');
         const timeElement2 = document.getElementById('dynamic-time2');
-        const now = new Date();
 
-        const options = { day: 'numeric', month: 'long', year: 'numeric' };
-        const formattedDate = now.toLocaleDateString('en-GB', options);
-        const formattedTime = now.toLocaleTimeString('en-GB', { hour12: false });
+        try {
+            // Fetch waktu server dari endpoint Laravel
+            const response = await fetch('/server-time'); // URL endpoint Anda
+            const data = await response.json();
 
-        timeElement1.textContent = `${formattedDate}`;
-        timeElement2.textContent = `${formattedTime}`;
+            // Konversi waktu server menjadi objek Date
+            const serverTime = new Date(data.server_time);
+
+            // Format tanggal dan waktu
+            const options = { day: 'numeric', month: 'long', year: 'numeric' };
+            const formattedDate = serverTime.toLocaleDateString('en-GB', options);
+            const formattedTime = serverTime.toLocaleTimeString('en-GB', { hour12: false });
+
+            // Perbarui elemen HTML
+            timeElement1.textContent = formattedDate;
+            timeElement2.textContent = formattedTime;
+        } catch (error) {
+            console.error('Failed to fetch server time:', error);
+        }
     }
     setInterval(updateTime, 1000);
     updateTime();
