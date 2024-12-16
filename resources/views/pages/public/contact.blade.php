@@ -54,6 +54,10 @@
             </div>
             <p class="mb-4" style="text-align: justify">
               We'd love to hear from you! If you have any questions, need more information, or want to share your feedback, please don't hesitate to reach out. Simply fill out the contact form, and our team will get back to you as soon as possible.
+              <br>
+              Email : <a target="_blank" href="mailto:sales@nouransejahtera.com" style="color: #013679;">sales@nouransejahtera.com</a>
+              <br>
+              Phone : <a target="_blank" href="https://api.whatsapp.com/send?phone=6282199512424" style="color: #013679;">+62 821-9951-2424 (WhatsApp)</a>
             </p>
             <form method="POST" action="{{ route('contact.send') }}" enctype="multipart/form-data">
               @csrf
@@ -84,7 +88,7 @@
                     <label for="phone">Your Phone</label>
                   </div>
                 </div>
-                <div class="col-12">
+                <div class="col-6">
                   <div class="form-floating">
                     <input
                       type="email"
@@ -97,7 +101,7 @@
                     <label for="email">Your Email</label>
                   </div>
                 </div>
-                <div class="col-12">
+                <div class="col-6">
                   <div class="form-floating">
                     <input
                       type="text"
