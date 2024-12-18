@@ -235,7 +235,7 @@
         <!-- General Trading -->
         <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
           <div class="service-item bg-light overflow-hidden h-100">
-            <img class="img-fluid" src="{{ url('') }}/assets/public/img/Layanan/1.jpg" alt="" />
+            <img class="img-fluid" src="{{ url('') }}/assets/public/img/Layanan/general.jpg" alt="" />
             <div class="service-text position-relative text-center h-100 p-4">
               <h5 class="mb-3">General Trading</h5>
               <p>
@@ -247,7 +247,7 @@
         <!-- Supplier -->
         <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
           <div class="service-item bg-light overflow-hidden h-100">
-            <img class="img-fluid" src="{{ url('') }}/assets/public/img/Layanan/3.jpg" alt="" />
+            <img class="img-fluid" src="{{ url('') }}/assets/public/img/Layanan/supplier.jpg" alt="" />
             <div class="service-text position-relative text-center h-100 p-4">
               <h5 class="mb-3">Supplier</h5>
               <p>
