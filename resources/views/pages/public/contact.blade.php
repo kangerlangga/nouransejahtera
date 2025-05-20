@@ -57,7 +57,7 @@
               <br>
               Email : <a target="_blank" href="mailto:sales@nouransejahtera.com" style="color: #013679;">sales@nouransejahtera.com</a>
               <br>
-              Phone : <a target="_blank" href="https://api.whatsapp.com/send?phone=6282199512424" style="color: #013679;">+62 821-9951-2424 (WhatsApp)</a>
+              Phone : <a target="_blank" href="https://api.whatsapp.com/send?phone=6281553225421" style="color: #013679;">+62 815-5322-5421 (WhatsApp)</a>
             </p>
             <form method="POST" action="{{ route('contact.send') }}" enctype="multipart/form-data">
               @csrf

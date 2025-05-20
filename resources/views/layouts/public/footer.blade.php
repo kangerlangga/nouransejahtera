@@ -22,7 +22,7 @@
 <script type="text/javascript">
 $(function () {
     $('#cpWA').floatingWhatsApp({
-    phone: '6282199512424',
+    phone: '6281553225421',
     size: '70px',
     position: "right"
     });
